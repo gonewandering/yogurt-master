@@ -1,7 +1,7 @@
 const express = require('express')
 const routes = require('./routes')
 const sensor = require('node-dht-sensor')
-
+const config = require('./lib/config')
 const app = express()
 
 app.use(express.static('app/build'))
