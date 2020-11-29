@@ -8,7 +8,7 @@ module.exports = async function (req, res) {
 
   res.json({
     humidity,
-    temperature,
+    temperature: tempF,
     config: config.get()
   })
 }
