@@ -17,6 +17,7 @@ async function worker() {
       client.switch('Yogurt', true)
     }
 
+    console.log(min, tempF, max)
     await delay(2000)
   }
 }
