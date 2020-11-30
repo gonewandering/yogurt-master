@@ -4,9 +4,6 @@ const sensor = require('node-dht-sensor')
 const config = require('./lib/config')
 const app = express()
 
-app.use(express.static('app/build'))
-app.use(express.json())
-
 app.use(async (req, res, next) => {
   let {humidity, temperature} = await sensor.read(22, 4)
   res.header('temperature', temperature)
@@ -14,6 +11,9 @@ app.use(async (req, res, next) => {
   res.header('config', JSON.stringify(config.get()))
   next()
 })
+
+app.use(express.static('public'))
+app.use(express.json())
 
 app.get('/api', routes.get)
 app.post('/api', routes.set)
