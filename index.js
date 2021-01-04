@@ -20,7 +20,7 @@ app.use(async (req, res, next) => {
   next()
 })
 
-app.use(express.static('public'))
+app.use(express.static('app/build'))
 app.use(express.json())
 
 app.get('/api', routes.get)

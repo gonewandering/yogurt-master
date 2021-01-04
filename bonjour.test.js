@@ -1,5 +1,5 @@
 var bonjour = require('bonjour')()
 
-bonjour.find({ type: 'tcp' }, function (service) {
+bonjour.find({ type: 'http' }, function (service) {
   console.log('Found an HTTP server:', service)
 })
