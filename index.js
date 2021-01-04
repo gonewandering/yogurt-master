@@ -2,6 +2,9 @@ const express = require('express')
 const routes = require('./routes')
 const sensor = require('node-dht-sensor')
 const config = require('./lib/config')
+var bonjour = require('bonjour')()
+bonjour.publish({ name: 'yogurt-master', type: 'http', port: 3000 })
+
 const app = express()
 
 app.use(async (req, res, next) => {
