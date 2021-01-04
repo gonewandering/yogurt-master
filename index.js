@@ -7,8 +7,8 @@ bonjour.publish({ name: 'yogurt-master', type: 'http', port: 3000 })
 
 const app = express()
 const service = bonjour.publish({
-  name: 'YogurtMaster 6000',
-  host: 'yogurt-master'
+  name: 'yogurt-master',
+  type: 'http'
 })
 
 app.use(async (req, res, next) => {
