@@ -1,5 +1,5 @@
 export default function Navigation (props) {
-  let active = props.config.active || true
+  let active = props.active
   let toggleActive = props.toggle
 
   let btn = (

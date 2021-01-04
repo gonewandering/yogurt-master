@@ -57,7 +57,7 @@ class App extends react.Component {
   render() {
     return (
       <div className="App">
-        <Nav config={ this.state.config } toggle={ this.toggleActive } />
+        <Nav active={ this.state.config.active } toggle={ this.toggleActive } />
         <div className="row" style={ {marginTop: 60 }}>
           <div className="col-6">
             <h1>{ Math.round(this.state.temperature * 100) / 100 }°</h1>
