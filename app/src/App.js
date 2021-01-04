@@ -50,7 +50,8 @@ class App extends react.Component {
       dataType: 'json'
     })
 
-    this.setState(data)
+    this.state.config.active = active
+    await this.setState(this.state)
   }
 
   render() {
