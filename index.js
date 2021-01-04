@@ -6,6 +6,10 @@ var bonjour = require('bonjour')()
 bonjour.publish({ name: 'yogurt-master', type: 'http', port: 3000 })
 
 const app = express()
+const service = bonjour.publish({
+  name: 'YogurtMaster 6000',
+  host: 'yogurt-master'
+})
 
 app.use(async (req, res, next) => {
   let {humidity, temperature} = await sensor.read(22, 4)
