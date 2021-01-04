@@ -29,9 +29,16 @@ class App extends react.Component {
     this.state = stub
 
     this.toggleActive = this.toggleActive.bind(this)
+    this.getInfo = this.getInfo.bind(this)
+
+    window.setInterval(this.getInfo, 3000)
   }
 
   async componentDidMount() {
+    this.getInfo()
+  }
+
+  async getInfo() {
     let data = await $.get('/api')
 
     if (typeof data === 'object') {
