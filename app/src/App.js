@@ -41,7 +41,13 @@ class App extends react.Component {
 
   async toggleActive() {
     let active = !this.state.config.active
-    let data = await $.post(`/api`, { active: active })
+
+    let data = await $.ajax({
+      type: "POST",
+      url: `/api`,
+      data: { active },
+      dataType: 'json'
+    })
 
     this.setState(data)
   }
