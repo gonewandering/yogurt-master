@@ -3,12 +3,12 @@ export default function Navigation (props) {
   let toggleActive = props.toggle
 
   let btn = (
-    <a className="btn-sm bg-success" href="#" tabindex="-1" onClick={ toggleActive }>Enable</a>
+    <a className="btn-sm bg-success text-white" href="#" tabindex="-1" onClick={ toggleActive }>Enable</a>
   )
 
   if (active) {
     btn = (
-      <a className="btn-sm bg-warning" href="#" tabindex="-1" onClick={ toggleActive }>Disable</a>
+      <a className="btn-sm bg-warning text-white" href="#" tabindex="-1" onClick={ toggleActive }>Disable</a>
     )
   }
 

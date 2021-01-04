@@ -65,14 +65,16 @@ class App extends react.Component {
     return (
       <div className="App">
         <Nav active={ this.state.config.active } toggle={ this.toggleActive } />
-        <div className="row" style={ {marginTop: 60 }}>
-          <div className="col-6">
-            <h1>{ Math.round(this.state.temperature * 100) / 100 }°</h1>
-            <h3>Temperature ({ this.state.config.temp[0] }°-{ this.state.config.temp[1] }°)</h3>
-          </div>
-          <div className="col-6">
-            <h1>{ Math.round(this.state.humidity * 100) / 100 }%</h1>
-            <h3>Humidity</h3>
+        <div className="container-fluid">
+          <div className="row" style={ {marginTop: 60 }}>
+            <div className="col-6">
+              <h1>{ Math.round(this.state.temperature * 100) / 100 }°</h1>
+              <h3>Temperature ({ this.state.config.temp[0] }°-{ this.state.config.temp[1] }°)</h3>
+            </div>
+            <div className="col-6">
+              <h1>{ Math.round(this.state.humidity * 100) / 100 }%</h1>
+              <h3>Humidity</h3>
+            </div>
           </div>
         </div>
       </div>
