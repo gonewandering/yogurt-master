@@ -45,7 +45,8 @@ class App extends react.Component {
     let data = await $.ajax({
       type: "POST",
       url: `/api`,
-      data: { active },
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify({ active }),
       dataType: 'json'
     })
 
